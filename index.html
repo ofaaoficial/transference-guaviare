@@ -9,26 +9,40 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-<main class="row">
-    <section class="p1-50">
-        <h2>Img del layout</h2>
-        <img src="assets/imgs/speedtest.png" alt="reference">
-    </section>
-    <section class="p1-50">
-        <h2>Layout</h2>
-        <section class="container">
-            <article class="container-2">
-                <section class="site-title">
-                    Site title
-                </section>
-                <section class="nav">Nav 1</section>
-                <section class="nav">Nav 2</section>
-                <section class="nav">Nav 3</section>
-            </article>
-            <article class="post-title">Post Title</article>
-            <article class="side-bar">Side Bar</article>
-        </section>
-    </section>
+<main class="container">
+    <textarea name="text" id="keyboard-text" cols="30" rows="10" class="keyboard-text"></textarea>
+    <article class="virtual-keyboard">
+        <section class="key" id="q">q</section>
+        <section class="key" id="w">w</section>
+        <section class="key" id="e">e</section>
+        <section class="key" id="r">r</section>
+        <section class="key" id="t">t</section>
+        <section class="key" id="y">y</section>
+        <section class="key" id="u">u</section>
+    </article>
+    <script>
+
+        document.querySelector('#keyboard-text').addEventListener('keydown', function (event) {
+            document.querySelectorAll('.key').forEach(teclaVirtual => {
+                if(event.key == teclaVirtual.getAttribute('id')){
+                    console.log('Presionando tecla existente en el teclado virtual');
+                    console.log(teclaVirtual);
+                    teclaVirtual.classList.add('keypress');
+                }
+            });
+        });
+
+        document.querySelector('#keyboard-text').addEventListener('keyup', function (event) {
+            if(document.querySelector('.keypress') && document.querySelector('.keypress').classList.contains('keypress'))
+                document.querySelector('.keypress').classList.remove('keypress')
+        });
+
+        document.querySelectorAll('.key').forEach(teclaVirtual => {
+            teclaVirtual.addEventListener('click', function(event){
+                document.querySelector('#keyboard-text').value += event.target.id;
+            })
+        })
+    </script>
 </main>
 </body>
 </html>
