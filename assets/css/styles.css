@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/**
+    Fuentes
+@font-face {
+    font-family: ;
+    src: url("");
+}
+*/
+
+
+/**
+    Reset styles
+ */
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    word-break: break-word
+}
+
+/**
+    Crear estilos generales basados en frameworks por ejemplo
+    Bootstrap.
+ */
+.container{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.row{
+    display: flex;
+}
+
+.center{
+    align-items: center;
+    justify-content: center;
+}
+
+/**
+    Crear su propio sistema de grillas
+    Por ejemplo me base en Bootstrap para el mio
+ */
+
+/**
+    p1 : Es la primera pantalla en mi caso siempre lo utilizo para escritrio.
+ */
+.p1-1{
+    width: calc(1 / 12 * 100%);
+}
+
+.item{
+    background: black;
+    color: #fff;
+    padding: 20px;
+}
