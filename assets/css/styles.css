@@ -20,28 +20,34 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    word-break: break-word
+    word-break: break-word;
+    transition: .4s all ease-in-out;
 }
 
-#element{
-    background: #bb5e59;
-    color: #fff;
-    display: inline-block;
-    padding: 20px;
+.input-class{
+    border: 1px solid #c3c3c3;
+    padding: 8px 12px;
+    border-bottom: 2px solid #2657c7;
 }
 
-.item{
-    background: black;
-    color: #fff;
-    padding: 20px;
-    display: inline-block;
-    position: absolute;
+/**
+    Pseudo clases
+    https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+ */
+
+.input-class:focus{
+    border: 2px solid #2657c7;
 }
 
-.item--blue{
-    background: #2867b5;
+.input-class:hover{
+    background-color: #dedede;
 }
 
-.item--green{
-    background: #28b58e;
+.input-class:first-child{
+    background: rgba(0, 255, 252, 0.54);
 }
+
+.input-class:empty{
+    border-left: 1px solid red;
+}
+
