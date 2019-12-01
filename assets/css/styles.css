@@ -23,10 +23,25 @@
     word-break: break-word
 }
 
-section > p {
-    color: #ff3135;
+#element{
+    background: #bb5e59;
+    color: #fff;
+    display: inline-block;
+    padding: 20px;
 }
 
-span + span{
-    background: #ff9c61;
+.item{
+    background: black;
+    color: #fff;
+    padding: 20px;
+    display: inline-block;
+    position: absolute;
+}
+
+.item--blue{
+    background: #2867b5;
+}
+
+.item--green{
+    background: #28b58e;
 }
